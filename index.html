@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página para mi Pastelito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Página para mi Pastelito</h1>
+    </header>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item" id="reasons">
+                <img src="fotos/corazon.png" alt="Corazón Pixelado">
+                <p>Razones por las que te amo</p>
+            </div>
+            <div class="grid-item" id="time">
+                <img src="fotos/calendar.png" alt="Reloj Pixelado">
+                <p>Vida</p>
+            </div>
+            <div class="grid-item" id="gift">
+                <img src="fotos/regalo.png" alt="Caja de Regalo Pixelada">
+                <p>Regalo Sorpresa</p>
+            </div>
+        </div>
+
+        <!-- Sección para Razones por las que te amo -->
+        <div class="modal" id="reasonsModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Razones por las que te amo</h2>
+                <div id="reasonsList">
+                    <div>
+                        <p>Por tu sonrisa</p>
+                        <img src="fotos/sonrisa.jpg " alt="Sonrisa" style="max-width: 100%;">
+                    </div>
+                    <div>
+                        <p>Porque me pides besitos así</p>
+                        <img src="fotos/frente.jpg" alt="Pedir besitos" style="max-width: 100%;">
+                    </div>
+                    <!-- Añade más imágenes y descripciones aquí -->
+                    <div>
+                        <p>Porque cuando me ganas en UNO eres así</p>
+                        <img src="fotos/risa uno.jpg" alt="Pedir besitos" style="max-width: 100%;">
+                    </div>
+                    <div>
+                        <p>Porque no eres celosa</p>
+                        <img src="fotos/celos.jpg" alt="Pedir besitos" style="max-width: 100%;">
+                    </div>
+                    <div>
+                        <p>Porque te ves así en la bicicleta c:</p>
+                        <img src="fotos/bici.jpg" alt="Pedir besitos" style="max-width: 100%;">
+                    </div>
+                    <div>
+                        <p>Porque haces una carita sospechosa muy tierna</p>
+                        <img src="fotos/sospechoso.jpg" alt="Pedir besitos" style="max-width: 100%;">
+                    </div>
+
+
+
+                </div>
+                <button class="back" onclick="closeModal('reasonsModal')">Regresar</button>
+            </div>
+        </div>
+
+        <!-- Sección para Vida -->
+        <div class="modal" id="timeModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Tiempo Juntas</h2>
+                <p id="timeTogether"></p>
+                <button class="back" onclick="closeModal('timeModal')">Regresar</button>
+            </div>
+        </div>
+
+        <!-- Sección para Regalo Sorpresa -->
+        <div class="modal" id="giftModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Regalo Sorpresa</h2>
+                <img src="fotos/mariachi.jpg" alt="Regalo">
+                <audio id="mariachiAudio">
+                    <source src="fotos/Y2meta.app - Mariachi Vargas   Son de la negra (128 kbps).mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <button class="back" onclick="closeModal('giftModal')">Regresar</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
